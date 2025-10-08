@@ -1,0 +1,59 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "MockPushComm",
+  "sourceName": "contracts/MockPushComm.sol",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "channel",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "identity",
+          "type": "bytes"
+        }
+      ],
+      "name": "NotificationSent",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_channel",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_identity",
+          "type": "bytes"
+        }
+      ],
+      "name": "sendNotification",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608080604052346100165761011f908161001c8239f35b600080fdfe6080806040526004361015601257600080fd5b600090813560e01c63ba3d69d714602857600080fd5b3460e557606036600319011260e5576001600160a01b0390600435828116919082900360e15760243592831680930360e1576044359067ffffffffffffffff80831160dd573660238401121560dd57826004013590811160dd57366024828501011160dd57818160409260247f0e4b44fb38eac0331850c1153816cc5b44ae83beaac9977aa7a1a41033969d37966020855282602086015201848401378181018301889052601f01601f19168101030190a380f35b8580fd5b8380fd5b5080fdfea264697066735822122058f13817a2cd72987acc90d394b77fd24771c7b1e6115c6b3ef090dab8304a3264736f6c63430008140033",
+  "deployedBytecode": "0x6080806040526004361015601257600080fd5b600090813560e01c63ba3d69d714602857600080fd5b3460e557606036600319011260e5576001600160a01b0390600435828116919082900360e15760243592831680930360e1576044359067ffffffffffffffff80831160dd573660238401121560dd57826004013590811160dd57366024828501011160dd57818160409260247f0e4b44fb38eac0331850c1153816cc5b44ae83beaac9977aa7a1a41033969d37966020855282602086015201848401378181018301889052601f01601f19168101030190a380f35b8580fd5b8380fd5b5080fdfea264697066735822122058f13817a2cd72987acc90d394b77fd24771c7b1e6115c6b3ef090dab8304a3264736f6c63430008140033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

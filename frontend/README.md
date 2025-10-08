@@ -1,73 +1,129 @@
-# Welcome to your Lovable project
+# PushBet Frontend
 
-## Project info
+A next-generation cross-chain betting platform built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/00e88eac-3f45-409a-b7b5-6a352793e591
+## Features
 
-## How can I edit this code?
+- **Cross-Chain Betting**: Place bets across multiple blockchains
+- **Push Protocol Integration**: Real-time notifications for betting activities
+- **Web3 Wallet Support**: Connect with MetaMask and other Web3 wallets
+- **Modern UI**: Built with shadcn/ui components and Tailwind CSS
+- **TypeScript**: Full type safety throughout the application
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS, shadcn/ui
+- **Web3**: Ethers.js, Push Protocol
+- **State Management**: React Query, React Context
+- **Routing**: React Router DOM
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/00e88eac-3f45-409a-b7b5-6a352793e591) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v18 or higher)
+- npm or yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd pushbet-frontend
+```
 
-Follow these steps:
+2. Install dependencies:
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open [http://localhost:8080](http://localhost:8080) in your browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui components
+│   ├── Layout.tsx      # Main layout component
+│   ├── Navbar.tsx      # Navigation bar
+│   └── ...
+├── contexts/           # React contexts
+│   └── PushContext.tsx # Push Protocol context
+├── hooks/              # Custom React hooks
+│   └── useWallet.ts    # Wallet connection hook
+├── pages/              # Page components
+│   ├── Dashboard.tsx   # Main dashboard
+│   ├── CreateBet.tsx   # Create bet page
+│   └── ...
+├── providers/          # Context providers
+│   └── Web3Provider.tsx # Web3 context provider
+└── types/              # TypeScript type definitions
+```
 
-This project is built with:
+## Environment Variables
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Create a `.env.local` file in the root directory:
 
-## How can I deploy this project?
+```env
+VITE_PUSH_CHAIN_RPC_URL=https://evm.rpc-testnet-donut-node1.push.org/
+VITE_PUSH_CHAIN_CHAIN_ID=1001
+VITE_CONTRACT_ADDRESS=0x...
+```
 
-Simply open [Lovable](https://lovable.dev/projects/00e88eac-3f45-409a-b7b5-6a352793e591) and click on Share -> Publish.
+## Deployment
 
-## Can I connect a custom domain to my Lovable project?
+### Build for Production
 
-Yes, you can!
+```bash
+npm run build
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+The build artifacts will be stored in the `dist/` directory.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Deploy to Vercel
+
+1. Install Vercel CLI:
+```bash
+npm i -g vercel
+```
+
+2. Deploy:
+```bash
+vercel
+```
+
+### Deploy to Netlify
+
+1. Build the project:
+```bash
+npm run build
+```
+
+2. Deploy the `dist/` folder to Netlify.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Commit your changes: `git commit -am 'Add new feature'`
+4. Push to the branch: `git push origin feature/new-feature`
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.

@@ -13,15 +13,24 @@
     <meta property="og:title" content="PushBet - Bet Across Chains, Instantly" />
     <meta property="og:description" content="Next-generation cross-chain betting platform powered by PushChain" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:image" content="/placeholder.svg" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@pushbet" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:image" content="/placeholder.svg" />
   </head>
 
   <body>
     <div id="root"></div>
+    <script>
+      // Polyfills for Node.js globals
+      if (typeof global === 'undefined') {
+        window.global = window;
+      }
+      if (typeof process === 'undefined') {
+        window.process = { env: {} };
+      }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

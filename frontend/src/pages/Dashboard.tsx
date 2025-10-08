@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { TrendingUp, TrendingDown, Clock, Trophy, Filter } from "lucide-react";
+import PushNotifications from "@/components/PushNotifications";
+import WalletStatus from "@/components/WalletStatus";
 
 const Dashboard = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -131,6 +133,12 @@ const Dashboard = () => {
               {category.name}
             </Button>
           ))}
+        </div>
+
+        {/* Wallet and Push Notifications Section */}
+        <div className="mb-8 grid gap-6 md:grid-cols-2">
+          <WalletStatus />
+          <PushNotifications />
         </div>
 
         {/* Bets Grid */}
