@@ -131,11 +131,11 @@ const Leaderboard = () => {
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
             <Trophy className="w-4 h-4 text-primary" />
-            <span className="text-sm font-semibold text-primary">Top Performers</span>
+            <span className="text-sm font-semibold text-primary">Sample rankings</span>
           </div>
-          <h1 className="text-4xl font-bold mb-2">Leaderboard</h1>
+          <h1 className="text-4xl font-bold mb-2">Simulated leaderboard</h1>
           <p className="text-xl text-muted-foreground">
-            See who's dominating the betting arena
+            Simulated rankings, addresses and winnings; not real participants or activity.
           </p>
         </div>
 
@@ -145,7 +145,7 @@ const Leaderboard = () => {
             <Card className="p-6 border-border/50">
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <TrendingUp className="w-6 h-6 text-primary" />
-                Top Bettors
+                Sample bettors
               </h2>
 
               <div className="space-y-3">
@@ -234,7 +234,7 @@ const Leaderboard = () => {
             <Card className="p-6 border-border/50">
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <DollarSign className="w-6 h-6 text-accent" />
-                Recent Winners
+                Simulated winners
               </h2>
 
               <div className="space-y-4">
@@ -270,12 +270,12 @@ const Leaderboard = () => {
             {/* CTA Card */}
             <Card className="p-6 gradient-card border-primary/20 text-center">
               <Trophy className="w-12 h-12 mx-auto mb-4 text-accent animate-float" />
-              <h3 className="text-xl font-bold mb-2">Join the Ranks</h3>
+              <h3 className="text-xl font-bold mb-2">Fixture data only</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Start betting and climb your way to the top of the leaderboard
+                These rankings do not update from bets, wallets or chain data.
               </p>
               <Badge className="bg-gradient-to-r from-primary to-accent">
-                Win Big, Rise Fast
+                No live rankings
               </Badge>
             </Card>
           </div>

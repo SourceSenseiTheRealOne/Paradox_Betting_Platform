@@ -35,8 +35,8 @@ const CreateBet = () => {
       return;
     }
 
-    toast.success("Bet created successfully!", {
-      description: "Your custom bet is now live on PushBet",
+    toast.success("Demo only: form cleared", {
+      description: "No bet was saved or submitted to a contract.",
     });
 
     // Reset form
@@ -58,11 +58,11 @@ const CreateBet = () => {
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-semibold text-primary">Create Custom Bet</span>
+            <span className="text-sm font-semibold text-primary">Demo bet form</span>
           </div>
-          <h1 className="text-4xl font-bold mb-2">Create Your Own Bet</h1>
+          <h1 className="text-4xl font-bold mb-2">Simulate a bet form</h1>
           <p className="text-xl text-muted-foreground">
-            Set up a custom betting event and invite others to participate
+            Demo form only. Nothing is persisted or sent to the escrow. Do not enter sensitive information.
           </p>
         </div>
 
@@ -239,11 +239,11 @@ const CreateBet = () => {
             {/* Submit Button */}
             <Button type="submit" variant="hero" size="lg" className="w-full gap-2">
               <PlusCircle className="w-5 h-5" />
-              Create Bet
+              Simulate bet creation
             </Button>
 
             <p className="text-sm text-muted-foreground text-center">
-              By creating a bet, you agree to our terms of service and betting rules
+              Simulation only: submitting clears the form without creating a bet.
             </p>
           </form>
         </Card>

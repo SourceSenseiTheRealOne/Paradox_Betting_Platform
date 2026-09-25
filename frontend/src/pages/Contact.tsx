@@ -22,8 +22,8 @@ const Contact = () => {
       return;
     }
 
-    toast.success("Message sent successfully!", {
-      description: "We'll get back to you as soon as possible",
+    toast.success("Demo only: message not sent", {
+      description: "Nothing was delivered or saved.",
     });
 
     // Reset form
@@ -65,16 +65,16 @@ const Contact = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Demo contact form</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            This form only shows a toast and resets. Do not enter personal information. No message is sent.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Contact Form */}
           <Card className="p-8 border-border/50">
-            <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
+            <h2 className="text-2xl font-bold mb-6">Simulate a message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="name">Name *</Label>
@@ -120,7 +120,7 @@ const Contact = () => {
 
               <Button type="submit" variant="hero" size="lg" className="w-full gap-2">
                 <Send className="w-4 h-4" />
-                Send Message
+                Simulate message
               </Button>
             </form>
           </Card>
@@ -129,7 +129,7 @@ const Contact = () => {
           <div className="space-y-8">
             {/* Contact Methods */}
             <div>
-              <h2 className="text-2xl font-bold mb-6">Other Ways to Reach Us</h2>
+              <h2 className="text-2xl font-bold mb-6">Unverified legacy links</h2>
               <div className="space-y-4">
                 {contactMethods.map((method) => (
                   <a
@@ -156,18 +156,18 @@ const Contact = () => {
 
             {/* FAQ Card */}
             <Card className="p-8 gradient-card border-primary/20">
-              <h3 className="text-xl font-bold mb-4">Looking for Support?</h3>
+              <h3 className="text-xl font-bold mb-4">Prototype support mockup</h3>
               <p className="text-muted-foreground mb-6">
-                Check out our FAQ section for quick answers to common questions about betting, withdrawals, and more.
+                This panel and its control are placeholders, not a support service.
               </p>
               <Button variant="outline" className="w-full">
-                View FAQ
+                Demo control only
               </Button>
             </Card>
 
             {/* Business Hours */}
             <Card className="p-6 border-border/50">
-              <h3 className="text-lg font-semibold mb-4">Support Hours</h3>
+              <h3 className="text-lg font-semibold mb-4">Illustrative support hours</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Monday - Friday</span>

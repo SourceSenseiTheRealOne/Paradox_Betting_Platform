@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="760" viewBox="0 0 1080 760" role="img" aria-labelledby="title description">
+  <title id="title">Paradox: source architecture, not a deployed betting system</title>
+  <desc id="description">The React frontend renders simulated betting fixtures and toast-only forms. Wallet and Push staging code exists but is unverified. There is no UI-to-escrow transaction path. A separate Hardhat suite tests Solidity escrow with token and notification mocks. Payout and refund defects remain; no contract deployment is verified.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="1080" height="760" rx="16" fill="#020617"/>
+  <rect width="1080" height="760" rx="16" fill="url(#grid)"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#e2e8f0">
+    <text x="40" y="52" font-size="28" font-weight="700">Paradox</text>
+    <text x="40" y="83" font-size="18" fill="#cbd5e1">Betting Escrow Prototype · source architecture</text>
+    <text x="40" y="117" font-size="16" fill="#94a3b8">Hackathon work, not submitted · intended platform: Push Chain</text>
+
+    <rect x="40" y="152" width="470" height="367" rx="12" fill="#0f172a" stroke="#22d3ee"/>
+    <text x="64" y="188" font-size="16" font-weight="700" fill="#67e8f9">BROWSER / REACT + TYPESCRIPT</text>
+    <rect x="64" y="209" width="422" height="117" rx="8" fill="#083344" stroke="#22d3ee"/>
+    <text x="84" y="240" font-size="20" font-weight="700">Mock betting interface</text>
+    <text x="84" y="268" font-size="16">Fixed bets, odds, pools, history and rankings</text>
+    <text x="84" y="294" font-size="16">Create Bet / Contact: toast and reset only</text>
+    <path d="M275 326V363" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+    <rect x="64" y="372" width="422" height="121" rx="8" fill="#1e293b" stroke="#94a3b8" stroke-dasharray="5 5"/>
+    <text x="84" y="404" font-size="20" font-weight="700">Wallet + Push staging SDK</text>
+    <text x="84" y="432" font-size="16">Provider / notification code is present</text>
+    <text x="84" y="459" font-size="16" fill="#fbbf24">Connected lifecycle not verified</text>
+
+    <rect x="550" y="152" width="490" height="367" rx="12" fill="#0f172a" stroke="#34d399"/>
+    <text x="574" y="188" font-size="16" font-weight="700" fill="#6ee7b7">SEPARATE LOCAL CONTRACT PACKAGE</text>
+    <rect x="574" y="209" width="442" height="117" rx="8" fill="#064e3b" stroke="#34d399"/>
+    <text x="594" y="240" font-size="20" font-weight="700">Hardhat tests + mocks</text>
+    <text x="594" y="268" font-size="16">Mock ERC-20 token and Push communication</text>
+    <text x="594" y="294" font-size="16">Original suite: 15 passing, limited assertions</text>
+    <path d="M795 326V363" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="574" y="372" width="442" height="121" rx="8" fill="#1e293b" stroke="#fb7185"/>
+    <text x="594" y="404" font-size="20" font-weight="700">PushBetEscrow.sol</text>
+    <text x="594" y="432" font-size="16">Deposits, outcomes, disputes and withdrawals</text>
+    <text x="594" y="459" font-size="16" fill="#fda4af">Wrong recipients, double payments, bad refunds</text>
+
+    <rect x="40" y="545" width="1000" height="107" rx="10" fill="#1c1525" stroke="#fb7185" stroke-dasharray="6 4"/>
+    <text x="64" y="578" font-size="21" font-weight="700" fill="#fda4af">No UI-to-escrow transaction path</text>
+    <text x="64" y="607" font-size="17">No verified contract deployment · No application API or database</text>
+    <text x="64" y="634" font-size="17">Known financial defects and owner withdrawal authority: do not use real funds.</text>
+
+    <path d="M40 689H90" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="103" y="695" font-size="15" fill="#cbd5e1">Local test calls</text>
+    <path d="M290 689H340" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+    <text x="353" y="695" font-size="15" fill="#cbd5e1">Optional integration code; unverified</text>
+    <text x="40" y="731" font-size="14" fill="#94a3b8">Boxes describe source boundaries. Neither arrow represents a verified chain transaction.</text>
+  </g>
+</svg>
