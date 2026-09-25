@@ -13,17 +13,17 @@ const Footer = () => {
                 P
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                PushBet
+                Paradox
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Next-generation cross-chain betting platform powered by PushChain technology.
+              Prototype only. All betting data is simulated. Do not use real funds.
             </p>
           </div>
 
           {/* Platform */}
           <div>
-            <h3 className="font-semibold mb-4 text-foreground">Platform</h3>
+            <h3 className="font-semibold mb-4 text-foreground">Prototype pages</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/dashboard" className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -50,7 +50,7 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold mb-4 text-foreground">Company</h3>
+            <h3 className="font-semibold mb-4 text-foreground">Project</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -64,12 +64,12 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Terms of Service
+                  Terms (placeholder)
                 </a>
               </li>
               <li>
                 <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Privacy Policy
+                  Privacy (placeholder)
                 </a>
               </li>
             </ul>
@@ -77,7 +77,7 @@ const Footer = () => {
 
           {/* Connect */}
           <div>
-            <h3 className="font-semibold mb-4 text-foreground">Connect</h3>
+            <h3 className="font-semibold mb-4 text-foreground">Legacy links (unverified)</h3>
             <div className="flex space-x-4">
               <a
                 href="https://twitter.com"
@@ -111,9 +111,9 @@ const Footer = () => {
               </a>
             </div>
             <div className="mt-6 space-y-2">
-              <p className="text-xs text-muted-foreground">Powered by</p>
+              <p className="text-xs text-muted-foreground">Intended chain / author</p>
               <div className="flex items-center space-x-3">
-                <span className="text-sm font-semibold text-primary">PushChain</span>
+                <span className="text-sm font-semibold text-primary">Push Chain</span>
                 <span className="text-muted-foreground">•</span>
                 <span className="text-sm font-semibold text-accent">SourceSensei</span>
               </div>
@@ -123,7 +123,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} PushBet. All rights reserved.
+            © {new Date().getFullYear()} Paradox. All rights reserved.
           </p>
         </div>
       </div>

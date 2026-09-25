@@ -99,9 +99,9 @@ const MyBets = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-2">My Bets</h1>
+          <h1 className="text-4xl font-bold mb-2">Sample bet history</h1>
           <p className="text-xl text-muted-foreground">
-            Track your betting history and performance
+            Simulated history and metrics, not your wallet activity. All dates and results are fixtures.
           </p>
         </div>
 
@@ -109,22 +109,22 @@ const MyBets = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <Card className="p-6 text-center border-border/50">
             <div className="text-3xl font-bold text-primary mb-1">{stats.totalBets}</div>
-            <div className="text-sm text-muted-foreground">Total Bets</div>
+            <div className="text-sm text-muted-foreground">Simulated bets</div>
           </Card>
 
           <Card className="p-6 text-center border-border/50">
             <div className="text-3xl font-bold text-accent mb-1">{stats.winRate}</div>
-            <div className="text-sm text-muted-foreground">Win Rate</div>
+            <div className="text-sm text-muted-foreground">Simulated win rate</div>
           </Card>
 
           <Card className="p-6 text-center border-border/50">
             <div className="text-3xl font-bold text-foreground mb-1">{stats.totalWagered}</div>
-            <div className="text-sm text-muted-foreground">Total Wagered</div>
+            <div className="text-sm text-muted-foreground">Simulated wagers</div>
           </Card>
 
           <Card className="p-6 text-center border-border/50">
             <div className="text-3xl font-bold text-success mb-1">{stats.netProfit}</div>
-            <div className="text-sm text-muted-foreground">Net Profit</div>
+            <div className="text-sm text-muted-foreground">Simulated profit</div>
           </Card>
         </div>
 
@@ -132,10 +132,10 @@ const MyBets = () => {
         <Tabs defaultValue="active" className="w-full">
           <TabsList className="grid w-full max-w-md grid-cols-2">
             <TabsTrigger value="active">
-              Active Bets ({activeBets.length})
+              Sample active ({activeBets.length})
             </TabsTrigger>
             <TabsTrigger value="completed">
-              Completed ({completedBets.length})
+              Sample completed ({completedBets.length})
             </TabsTrigger>
           </TabsList>
 
@@ -151,7 +151,7 @@ const MyBets = () => {
                     </div>
                     <Badge variant="secondary" className="gap-1">
                       <Clock className="w-3 h-3" />
-                      Active
+                      Sample active
                     </Badge>
                   </div>
 
@@ -180,7 +180,7 @@ const MyBets = () => {
                       {formatTimeRemaining(bet.endTime)}
                     </div>
                     <Button variant="outline" className="w-full">
-                      View Details
+                      Demo control only
                     </Button>
                   </div>
                 </Card>
@@ -211,12 +211,12 @@ const MyBets = () => {
                           {bet.result === "won" ? (
                             <>
                               <CheckCircle className="w-3 h-3" />
-                              Won
+                              Sample win
                             </>
                           ) : (
                             <>
                               <XCircle className="w-3 h-3" />
-                              Lost
+                              Sample loss
                             </>
                           )}
                         </Badge>
@@ -234,7 +234,7 @@ const MyBets = () => {
                       </div>
 
                       <div className="text-right">
-                        <div className="text-sm text-muted-foreground mb-1">Payout</div>
+                        <div className="text-sm text-muted-foreground mb-1">Simulated payout</div>
                         <div className="font-semibold">{bet.payout}</div>
                       </div>
 

@@ -1,129 +1,33 @@
-# PushBet Frontend
+# Paradox frontend prototype
 
-A next-generation cross-chain betting platform built with React, TypeScript, and Tailwind CSS.
+The React/TypeScript/Vite frontend uses Tailwind CSS, shadcn/ui and React Router. The package name remains `pushbet-frontend`; PushBet is the legacy UI identity.
 
-## Features
+## Runtime boundary
 
-- **Cross-Chain Betting**: Place bets across multiple blockchains
-- **Push Protocol Integration**: Real-time notifications for betting activities
-- **Web3 Wallet Support**: Connect with MetaMask and other Web3 wallets
-- **Modern UI**: Built with shadcn/ui components and Tailwind CSS
-- **TypeScript**: Full type safety throughout the application
+Betting screens use hardcoded fixtures and are not connected to the escrow. Category filters and local form state work in the browser. Create Bet and Contact validate inputs, show demo toasts and clear their fields without persistence or message delivery. Pricing controls do not create subscriptions. Historical sample dates can produce negative countdowns.
 
-## Tech Stack
+Wallet/provider and Push Protocol staging SDK code exist, but connected-wallet behavior is unverified. They are not a completed betting integration. Do not connect a funded wallet or enter personal information for this preview.
 
-- **Frontend**: React 18, TypeScript, Vite
-- **Styling**: Tailwind CSS, shadcn/ui
-- **Web3**: Ethers.js, Push Protocol
-- **State Management**: React Query, React Context
-- **Routing**: React Router DOM
+## Local commands
 
-## Getting Started
+From this directory, with Node.js 22 and npm:
 
-### Prerequisites
-
-- Node.js (v18 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd pushbet-frontend
+```sh
+npm ci --ignore-scripts --no-fund --no-audit
+npm run dev -- --host 127.0.0.1 --port 4361 --strictPort
 ```
 
-2. Install dependencies:
-```bash
-npm install
-```
+For a production-build preview, stop the development server first:
 
-3. Start the development server:
-```bash
-npm run dev
-```
-
-4. Open [http://localhost:8080](http://localhost:8080) in your browser.
-
-## Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run build:dev` - Build for development
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-
-## Project Structure
-
-```
-src/
-├── components/          # Reusable UI components
-│   ├── ui/             # shadcn/ui components
-│   ├── Layout.tsx      # Main layout component
-│   ├── Navbar.tsx      # Navigation bar
-│   └── ...
-├── contexts/           # React contexts
-│   └── PushContext.tsx # Push Protocol context
-├── hooks/              # Custom React hooks
-│   └── useWallet.ts    # Wallet connection hook
-├── pages/              # Page components
-│   ├── Dashboard.tsx   # Main dashboard
-│   ├── CreateBet.tsx   # Create bet page
-│   └── ...
-├── providers/          # Context providers
-│   └── Web3Provider.tsx # Web3 context provider
-└── types/              # TypeScript type definitions
-```
-
-## Environment Variables
-
-Create a `.env.local` file in the root directory:
-
-```env
-VITE_PUSH_CHAIN_RPC_URL=https://evm.rpc-testnet-donut-node1.push.org/
-VITE_PUSH_CHAIN_CHAIN_ID=1001
-VITE_CONTRACT_ADDRESS=0x...
-```
-
-## Deployment
-
-### Build for Production
-
-```bash
+```sh
 npm run build
+npm run preview -- --host 127.0.0.1 --port 4361 --strictPort
 ```
 
-The build artifacts will be stored in the `dist/` directory.
+No `.env` file is needed for disconnected browsing. The previously documented `VITE_CONTRACT_ADDRESS` does not wire the UI to an escrow consumer. See [local development](../docs/local-development.md) for gates and their known failures.
 
-### Deploy to Vercel
+## Deployment and licensing
 
-1. Install Vercel CLI:
-```bash
-npm i -g vercel
-```
+Historical Vercel deployment records do not prove anonymous app access or contract deployment. Earlier `vercel` and Netlify upload instructions are unverified and outside portfolio verification; no hosting setup is required here.
 
-2. Deploy:
-```bash
-vercel
-```
-
-### Deploy to Netlify
-
-1. Build the project:
-```bash
-npm run build
-```
-
-2. Deploy the `dist/` folder to Netlify.
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/new-feature`
-3. Commit your changes: `git commit -am 'Add new feature'`
-4. Push to the branch: `git push origin feature/new-feature`
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License.
+There is no repository-wide LICENSE file. Existing file-level notices are unchanged; the prior README's MIT statement is not a substitute for a confirmed repository-wide license. See the [root README](../README.md) and [evidence](../docs/evidence.md).

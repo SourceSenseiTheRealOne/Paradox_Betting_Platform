@@ -10,7 +10,7 @@ const Pricing = () => {
       name: "Basic",
       icon: Zap,
       price: "Free",
-      description: "Perfect for casual bettors",
+      description: "Illustrative Basic plan",
       features: [
         "Access to all betting categories",
         "Standard odds",
@@ -24,7 +24,7 @@ const Pricing = () => {
         "No-fee betting",
         "Early bet access",
       ],
-      buttonText: "Current Plan",
+      buttonText: "Demo only",
       popular: false,
     },
     {
@@ -32,7 +32,7 @@ const Pricing = () => {
       icon: Crown,
       price: "$29",
       period: "/month",
-      description: "For serious bettors",
+      description: "Illustrative Pro plan",
       features: [
         "Everything in Basic",
         "Boosted odds on selected events",
@@ -46,7 +46,7 @@ const Pricing = () => {
         "Zero-fee betting",
         "Dedicated account manager",
       ],
-      buttonText: "Upgrade to Pro",
+      buttonText: "Demo only",
       popular: true,
     },
     {
@@ -54,7 +54,7 @@ const Pricing = () => {
       icon: Rocket,
       price: "$99",
       period: "/month",
-      description: "For professional bettors",
+      description: "Illustrative Elite plan",
       features: [
         "Everything in Pro",
         "Zero betting fees",
@@ -67,7 +67,7 @@ const Pricing = () => {
         "Advanced API access",
       ],
       notIncluded: [],
-      buttonText: "Upgrade to Elite",
+      buttonText: "Demo only",
       popular: false,
     },
   ];
@@ -79,13 +79,13 @@ const Pricing = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
             <Crown className="w-4 h-4 text-primary" />
-            <span className="text-sm font-semibold text-primary">Subscription Plans</span>
+            <span className="text-sm font-semibold text-primary">Pricing mockup</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Choose Your Plan
+            Sample plan comparison
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Unlock premium features and boost your betting experience
+            Illustrative plans only. Prices and benefits are mockups; no subscriptions, billing or withdrawals are available.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ const Pricing = () => {
                 {plan.popular && (
                   <div className="absolute top-0 right-0">
                     <Badge className="rounded-tl-none rounded-br-none bg-gradient-to-r from-primary to-accent">
-                      Most Popular
+                      Sample highlight
                     </Badge>
                   </div>
                 )}
@@ -174,28 +174,28 @@ const Pricing = () => {
             <Card className="p-6 border-border/50">
               <h3 className="text-lg font-semibold mb-2">Can I cancel anytime?</h3>
               <p className="text-muted-foreground">
-                Yes, you can cancel your subscription at any time. Your access will continue until the end of your current billing period.
+                There is no subscription service or cancellation flow in this prototype.
               </p>
             </Card>
 
             <Card className="p-6 border-border/50">
               <h3 className="text-lg font-semibold mb-2">What payment methods do you accept?</h3>
               <p className="text-muted-foreground">
-                We accept all major cryptocurrencies including USDC, ETH, BTC, and SOL.
+                No payments are accepted by this pricing UI. Listed amounts are examples only.
               </p>
             </Card>
 
             <Card className="p-6 border-border/50">
               <h3 className="text-lg font-semibold mb-2">Can I upgrade or downgrade my plan?</h3>
               <p className="text-muted-foreground">
-                Yes, you can change your plan at any time. Upgrades are effective immediately, while downgrades take effect at the start of your next billing cycle.
+                Plan buttons are inactive demo controls. They do not change access or bill an account.
               </p>
             </Card>
 
             <Card className="p-6 border-border/50">
               <h3 className="text-lg font-semibold mb-2">Is there a refund policy?</h3>
               <p className="text-muted-foreground">
-                We offer a 7-day money-back guarantee for new subscribers. If you're not satisfied with your plan, contact support within 7 days for a full refund.
+                There is no paid subscription or refund service. The separate escrow has known refund defects; do not fund it.
               </p>
             </Card>
           </div>

@@ -113,9 +113,9 @@ const Dashboard = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-2">Betting Dashboard</h1>
+          <h1 className="text-4xl font-bold mb-2">Simulated betting dashboard</h1>
           <p className="text-xl text-muted-foreground">
-            Explore live bets across multiple categories
+            Sample bets, odds, pools and participants; not live. Dates are historical fixtures. Stay disconnected.
           </p>
         </div>
 
@@ -157,7 +157,7 @@ const Dashboard = () => {
                       {bet.trending ? (
                         <>
                           <TrendingUp className="w-3 h-3 mr-1" />
-                          Trending
+                          Sample trend
                         </>
                       ) : (
                         categories.find((c) => c.id === bet.category)?.icon
@@ -192,7 +192,7 @@ const Dashboard = () => {
               <div className="flex items-center justify-between text-sm mb-4 pt-4 border-t border-border">
                 <div className="flex items-center gap-1 text-muted-foreground">
                   <Trophy className="w-4 h-4" />
-                  <span>{bet.participants} bettors</span>
+                  <span>{bet.participants} simulated bettors</span>
                 </div>
                 <div className="flex items-center gap-1 text-muted-foreground">
                   <Clock className="w-4 h-4" />
@@ -202,7 +202,7 @@ const Dashboard = () => {
 
               {/* Total Pool */}
               <div className="text-center py-3 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20">
-                <div className="text-xs text-muted-foreground mb-1">Total Pool</div>
+                <div className="text-xs text-muted-foreground mb-1">Simulated pool</div>
                 <div className="text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   {bet.totalPool}
                 </div>
@@ -210,7 +210,7 @@ const Dashboard = () => {
 
               {/* Place Bet Button */}
               <Button variant="hero" className="w-full mt-4">
-                Place Bet
+                Betting unavailable
               </Button>
             </Card>
           ))}
